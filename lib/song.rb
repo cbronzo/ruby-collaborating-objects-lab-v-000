@@ -20,6 +20,7 @@ class Song
      song_file = filename.split(" - ")
      song = self.new(song_file[1])
      song.artist_name = song_file[0]
+     song.save
      song
 end
   
