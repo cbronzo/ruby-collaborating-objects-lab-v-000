@@ -30,7 +30,6 @@ def add_song(song)
     if @@all.find {|artist| artist.name == name}
   else
     artist = self.new(name)
-    artist.save
   end
 end
   
