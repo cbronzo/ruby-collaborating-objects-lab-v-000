@@ -31,6 +31,7 @@ def add_song(song)
       
   else
     artist = self.new(name)
+    artist.save
   end
 end
   
