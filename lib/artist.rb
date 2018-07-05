@@ -26,14 +26,15 @@ def add_song(song)
     @@all << self
   end
   
+  def self.create(name)
+    self.new(name).tap {|artist| artist.save}
+    
+  end
   
   def self.find_or_create_by_name(name)
     if @@all.find {|artist| artist.name == name}
-      
   else
-    artist = self.new(name)
-    binding.pry
-    artist.save
+    artist = self.create(name)
   end
 end
   
