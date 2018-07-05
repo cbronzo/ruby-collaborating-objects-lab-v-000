@@ -31,8 +31,10 @@ def add_song(song)
   end
   
   def self.find_or_create_by_name(name)
-    if @@all.find {|artist| artist.name == name}
-  else
+    artist = @@all.find {|artist| artist.name == name}
+     if artist
+       artist
+    else
     artist = self.create(name)
   end
 end
